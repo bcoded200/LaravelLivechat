@@ -71,7 +71,7 @@ class SendmessageController extends Controller
                 'ticket_id' => $tid,
             ];
 
-          //  Mail::to(config('codedlivechat.support_email'))->send(new NotifyTicketMailable($details));
+            Mail::to(config('codedlivechat.support_email'))->send(new NotifyTicketMailable($details));
             // Return a JSON response with the new message data
             return response()->json(['message' => request()->input('content'),]);
         } else {
@@ -98,7 +98,7 @@ class SendmessageController extends Controller
             ];
 
 
-           // Mail::to(config('livechat.support_email'))->send(new NotifyTicketMailable($details));
+            Mail::to(config('livechat.support_email'))->send(new NotifyTicketMailable($details));
 
             //Return a JSON response with the new message data
             return response()->json(['message' => request()->input('content'),]);
@@ -190,7 +190,7 @@ class SendmessageController extends Controller
                 'ticket_id' => $tid,
             ];
 
-          //  Mail::to(config('codedlivechat.support_email'))->send(new NotifyTicketMailable($details));
+            Mail::to(config('codedlivechat.support_email'))->send(new NotifyTicketMailable($details));
             // Return a JSON response with the new message data
             return response()->json(['message' => request()->input('content'),]);
         } else {
@@ -217,7 +217,7 @@ class SendmessageController extends Controller
             ];
 
 
-           // Mail::to(config('livechat.support_email'))->send(new NotifyTicketMailable($details));
+            Mail::to(config('livechat.support_email'))->send(new NotifyTicketMailable($details));
 
             //Return a JSON response with the new message data
             return response()->json(['message' => request()->input('content'),]);
