@@ -1,0 +1,1 @@
+No Content: https://laravel.spruko.com/xino/ltr/assets/js/chart.flot.sampledata.js

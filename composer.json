@@ -1,0 +1,40 @@
+{
+    "name": "coded/codedlivechat",
+    "description": "Coded livechat is a powerful messaging gateway that integrates intresting livechat system in your laravel application.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Coded\\Codedlivechat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chris",
+            "email": "dakingeorge58@gmail.com"
+        }
+    ],
+
+    "extra": {
+
+        "laravel": {
+
+        "providers": [
+
+        "Coded\\Codedlivechat\\CodedlivechatServiceProvider"
+
+        ],
+
+        "aliases": {
+
+        "Codedlivechat": "Coded\\Codedlivechat\\Facade"
+
+        }
+
+        }
+
+        },
+
+    "minimum-stability": "dev"
+
+}
