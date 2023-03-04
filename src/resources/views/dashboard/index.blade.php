@@ -207,65 +207,7 @@
 
 
 <!-- main-content closed -->
-	<!-- Basic modal -->
-    <div class="modal" id="modaldemo1">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content modal-content-demo">
 
-
-                <div class="modal-body pd-sm-40">
-                    <button aria-label="Close" class="close pos-absolute t-15 r-20 tx-26" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-                    <h5 class="modal-title mg-b-5">Create Support Ticket</h5>
-                    <p class="mg-b-20">How can we help you? send us a message, we will assign an agent to assit you.</p><br /><hr />
-
-                    <form method="POST" action="{{ route('contact.admin') }}">
-                    @csrf
-
-
-                    <div class="form-group">
-                        <label for="subject">Email Subject</label>
-                        <input  required class="form-control" placeholder="Subject ?" type="text" name="subject">
-                    </div>
-
-
-                    <div class="control-group form-group">
-                        <label class="form-label">Choose Category</label>
-                        <select required name="support_category" class="form-control select2 br-0 nice-select"
-                            data-placeholder="Choose one (with optgroup)">
-                            <optgroup label="category">
-                                <option disabled>--Choose Category--</option>
-
-                                    <option value="payback_loan">PAYBACK LOAN</option>
-                                    <option value="recieve_funds">RECIEVE FUNDS</option>
-
-
-                            </optgroup>
-                        </select>
-
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message Body</label>
-                        <textarea id="myeditorinstance"  class="form-control" type="text" name="message_body">
-
-                        </textarea>
-                    </div>
-
-
-                    <div class="form-group mg-b-25">
-
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-primary btn-block">Message Now</button>
-                </div>
-            </form>
-                <div class="modal-footer">
-
-                    <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Basic modal -->
     {{ LivesupportRender::renderCodedLiveChat() }}
 
     {{ LivesupportRender::liveChatJs() }}
