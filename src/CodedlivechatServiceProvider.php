@@ -67,13 +67,16 @@ class CodedlivechatServiceProvider extends ServiceProvider
      $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
      $this->loadViewsFrom(__DIR__ . '/resources/views', 'codedlivechat');
      $this->loadMigrationsFrom(__DIR__ . '/Database/migrations');
-     $this->publishes([
-        __DIR__.'/config/livechat.php' => config_path('livechat.php'),
-      ], 'config');
+
+
 
      /**
       * publish assets
     */
+
+    $this->publishes([
+        __DIR__.'/config/livechat.php' => config_path('livechat.php'),
+      ], 'config');
 
     $this->publishes([
         __DIR__ . '/public/codedlivechat' => public_path('codedlivechat'),
