@@ -19,12 +19,16 @@ class CreateSupportMessageStoresTable extends Migration
             $table->string('message_to')->nullable();
             $table->string('senders_id')->nullable();
             $table->string('receivers_id')->nullable();
-            $table->foreignId('ticket_id')->nullable()->constrained('support_chat_stores')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
+            $table->string('ticket_id')->nullable();
             $table->longText('message_body',500000)->nullable();
             $table->string('is_admin')->nullable();
             $table->dateTime('expirytime')->nullable();
+
+           /*** $table->string('t_id')->nullable()->constrained('support_chat_stores')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            --}}
+            **/
 
             $table->timestamps();
         });

@@ -17,7 +17,8 @@
 
 
 
-        @if (Auth::user()->role == 1)
+
+        @if (Auth::check() && Auth::user()->role == 1)
 
  <!-- row -->
  <div class="row">
@@ -63,6 +64,7 @@
 
                            @if($adminticket)
                            @forelse ($adminticket as $ticket)
+
                            <tr>
                             <td>
                             <a href="{{ route('livechat.admin.reply',['ticket_id'=>$ticket->ticket_id]) }}" class="btn btn-sm btn-success">Reply chat</a>

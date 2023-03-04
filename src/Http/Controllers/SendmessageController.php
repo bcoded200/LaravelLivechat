@@ -59,7 +59,7 @@ class SendmessageController extends Controller
             $message->message_body = $request->content;
             $message->ticket_id = $tid;
             $message->is_admin = 0;
-            $message->expirytime = Carbon::now()->timezone(config('livechat.timezone'));
+            $message->expirytime = Carbon::now()->addMinutes(config('livechat.chatTimer'))->timezone(config('livechat.timezone'));
             $message->save();
 
 
@@ -85,7 +85,7 @@ class SendmessageController extends Controller
             $message->message_body = $request->content;
             $message->ticket_id = $tid;
             $message->is_admin = 0;
-            $message->expirytime = Carbon::now()->timezone(config('livechat.timezone'));
+            $message->expirytime = Carbon::now()->addMinutes(config('livechat.chatTimer'))->timezone(config('livechat.timezone'));
             $message->save();
 
             $details = [
@@ -129,7 +129,7 @@ class SendmessageController extends Controller
             $message->message_body = $request->content;
             $message->ticket_id = $ticketinfo->ticket_id;
             $message->is_admin = 1;
-            $message->expirytime = Carbon::now()->timezone(config('livechat.timezone'));
+            $message->expirytime = Carbon::now()->addMinutes(config('livechat.chatTimer'))->timezone(config('livechat.timezone'));
             $message->save();
 
 
@@ -178,7 +178,7 @@ class SendmessageController extends Controller
             $message->message_body = $request->content;
             $message->ticket_id = $tid;
             $message->is_admin = 0;
-            $message->expirytime = Carbon::now()->timezone(config('livechat.timezone'));
+            $message->expirytime = Carbon::now()->addMinutes(config('livechat.chatTimer'))->timezone(config('livechat.timezone'));
             $message->save();
 
 
@@ -204,7 +204,7 @@ class SendmessageController extends Controller
             $message->message_body = $request->content;
             $message->ticket_id = $tid;
             $message->is_admin = 0;
-            $message->expirytime = Carbon::now()->timezone(config('livechat.timezone'));
+            $message->expirytime = Carbon::now()->addMinutes(config('livechat.chatTimer'))->timezone(config('livechat.timezone'));
             $message->save();
 
             $details = [

@@ -1,5 +1,5 @@
 @component('mail::message')
-# Hi,
+# Hi ADMIN,
 
 @if($details['type'] == 'reply')
 Someone just replied a support ticket on your website
@@ -11,7 +11,10 @@ Someone just created a support ticket on your website
 
 {{ $details['message'] }}
 
-@component('mail::button', ['url' => route('view.message',['ticket_id'=>$details['ticket_id']])])
+@php
+    $ticketid = $details['ticket_id'];
+@endphp
+@component('mail::button', ['url' => route('livechat.admin.reply',['ticket_id'=>$ticketid])])
 Open message online
 @endcomponent
 

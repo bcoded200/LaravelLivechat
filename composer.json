@@ -1,6 +1,6 @@
 {
     "name": "coded/codedlivechat",
-    "description": "Coded livechat is a powerful messaging gateway that integrates intresting livechat system in your laravel application.",
+    "description": "livechat is a powerful messaging gateway developed by Chris. It integrates intresting customer support chat system in your laravel application. You can take Tawk.to as a good example of this livechat",
     "type": "library",
     "license": "MIT",
     "autoload": {

@@ -9,13 +9,22 @@ use Illuminate\Support\Facades\Cookie;
 class LivesupportRender
 {
 
-    public $assign = "x";
-    protected $minuites = "120";
+    public $assign = 0;
+
+
+    /**
+     * Timezone for default time and date manipulation
+     */
+
+    protected function minuites()
+    {
+       return config('livechat.chatCookieTimer');
+    }
 
     public static function LivechatId()
     {
         $obj = new self;
-        $hash = $obj->assign . uniqid();
+        $hash = $obj->assign . rand(200000,1000000);
         return $hash;
     }
 
@@ -32,7 +41,7 @@ class LivesupportRender
             return $cookies = request()->cookie('guest');
         } else {
 
-            Cookie::queue(Cookie::make('guest', 'guest'.rand(1, 20000), $object->minuites));
+            Cookie::queue(Cookie::make('guest', 'guest'.rand(1, 20000), $object->minuites()));
 
             return $cookies = request()->cookie('guest');
         }
