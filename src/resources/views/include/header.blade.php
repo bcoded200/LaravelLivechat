@@ -92,12 +92,12 @@
         <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
         <aside class="app-sidebar sidebar-scroll ">
             <div class="main-sidebar-header">
-                <a class="desktop-logo logo-light" href="/">
+                <a class="desktop-logo logo-light" href="{{ route('livechat.index') }}">
 
                     <img src="{{ asset('logo/logo.png') }}" class="main-logo" alt="logo"></a>
-                <a class="desktop-logo logo-dark" href="/"><img src="{{ asset('logo/logo.png') }}" class="main-logo dark-theme" alt="logo"></a>
-                <a class="logo-icon mobile-logo icon-light" href="/"><img src="{{ asset('logo/logo.png') }}" class="logo-icon" alt="logo"></a>
-                <a class="logo-icon mobile-logo icon-dark" href="/"><img src="{{ asset('logo/logo.png') }}" class="logo-icon dark-theme" alt="logo"></a>
+                <a class="desktop-logo logo-dark" href="{{ route('livechat.index') }}"><img src="{{ asset('logo/logo.png') }}" class="main-logo dark-theme" alt="logo"></a>
+                <a class="logo-icon mobile-logo icon-light" href="{{ route('livechat.index') }}"><img src="{{ asset('logo/logo.png') }}" class="logo-icon" alt="logo"></a>
+                <a class="logo-icon mobile-logo icon-dark" href="{{ route('livechat.index') }}"><img src="{{ asset('logo/logo.png') }}" class="logo-icon dark-theme" alt="logo"></a>
             </div>
             <div class="main-sidebar-body circle-animation ">
 
@@ -106,10 +106,10 @@
                         <h3 class="">Back To Dashboard</h3>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" href="/dashboard"><i class="side-menu__icon ti-palette"></i><span class="side-menu__label">Dashboard</span></a>
+                        <a class="side-menu__item" href="/dashboard"><i class="side-menu__icon ti-palette"></i><span class="side-menu__label">Back To Dashboard</span></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" href="/livechat"><i class="side-menu__icon ti-palette"></i><span class="side-menu__label">All Tickets</span></a>
+                        <a class="side-menu__item" href="{{ route('livechat.index') }}"><i class="side-menu__icon ti-settings"></i><span class="side-menu__label">Tickets</span></a>
                     </li>
 
 

@@ -133,7 +133,7 @@ class CodedlivechatController extends Controller
                 'type' => 'create'
             ];
 
-            Mail::to(config('codedlivechat.support_email'))->send(new NotifyTicketMailable($details));
+            Mail::to(config('livechat.support_email'))->send(new NotifyTicketMailable($details));
 
             return redirect()->route('view.message', ['ticket_id' => $tid]);
         } else {
@@ -193,7 +193,7 @@ class CodedlivechatController extends Controller
                     'type' => 'create'
                 ];
 
-                Mail::to(config('codedlivechat.support_email'))->send(new NotifyTicketMailable($details));
+                Mail::to(config('livechat.support_email'))->send(new NotifyTicketMailable($details));
 
                 return redirect()->route('view.message', ['ticket_id' => $tid]);
             }

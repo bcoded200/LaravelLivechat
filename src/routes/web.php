@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::middleware(['web'])->namespace('Coded\Codedlivechat\Http\Controllers')->prefix('livechat')->group( function () {
+Route::middleware(['web','auth'])->namespace('Coded\Codedlivechat\Http\Controllers')->prefix('livechat')->group( function () {
 
     Route::get('/', 'CodedlivechatController@index')->name('livechat.index');
 
